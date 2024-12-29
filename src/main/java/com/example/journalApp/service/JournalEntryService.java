@@ -26,7 +26,7 @@ public class JournalEntryService {
           User user = userService.findByUserName(userName);
           JournalEntry saved = journalEntryRepository.save(journalEntry);
           user.getJournalEntries().add(saved);
-          user.setUserName(null);// by doing this it will save data in journalEntry but not in user that's why we need @Transactional
+          //user.setUserName(null);// by doing this it will save data in journalEntry but not in user that's why we need @Transactional
           userService.saveEntry(user);
       }catch (Exception e){
           System.out.println("Save entry" + e);
