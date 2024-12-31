@@ -22,4 +22,6 @@ public class User {
     private String password;
     @DBRef //This will connect my journalEntries with user
     private List<JournalEntry> journalEntries = new ArrayList<>();
+
+    private List<String> roles; //part of spring boot security
 }
